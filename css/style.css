@@ -301,14 +301,18 @@ p {
 }
 
 .logo {
-  font-family: 'Poppins', sans-serif;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--primary-navy);
+  display: flex;
+  align-items: center;
 }
 
-.logo span {
-  color: var(--accent-aqua);
+.logo img {
+  height: 40px;
+  width: auto;
+  transition: height 0.3s ease;
+}
+
+.header.scrolled .logo img {
+  height: 32px;
 }
 
 .nav-links {
