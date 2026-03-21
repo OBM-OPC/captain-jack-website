@@ -356,15 +356,10 @@ p {
 .lang-link.active {
   filter: grayscale(0%);
   opacity: 1;
-  box-shadow: 0 0 15px rgba(0, 194, 209, 0.6), 0 0 30px rgba(0, 194, 209, 0.3);
 }
 
 .header.scrolled .lang-link {
   color: var(--primary-navy);
-}
-
-.header.scrolled .lang-link.active {
-  box-shadow: 0 0 15px rgba(0, 194, 209, 0.6), 0 0 30px rgba(0, 194, 209, 0.3);
 }
 
 .lang-separator {
