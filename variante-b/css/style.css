@@ -363,6 +363,54 @@ p {
   display: none;
 }
 
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  margin-left: var(--space-md);
+  padding-left: var(--space-md);
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.header.scrolled .language-switcher {
+  border-left-color: rgba(10, 37, 64, 0.2);
+}
+
+.lang-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-normal);
+  color: var(--white);
+  text-decoration: none;
+}
+
+.lang-link.active {
+  color: var(--accent-aqua);
+}
+
+.header.scrolled .lang-link {
+  color: var(--primary-navy);
+}
+
+.header.scrolled .lang-link.active {
+  color: var(--accent-aqua);
+}
+
+@media (max-width: 768px) {
+  .language-switcher {
+    border-left: none;
+    margin-left: 0;
+    padding-left: 0;
+    margin-top: var(--space-md);
+    padding-top: var(--space-md);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+}
+
 .nav-links a:hover::after,
 .nav-links a.active::after {
   width: 100%;
