@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <title>Kontakt | Captain Jack Preveza</title>
+  <meta name="description" content="Kontaktieren Sie Captain Jack für Bootslagerung und Keelcrab Service in Preveza. Anruf, WhatsApp oder Formular – wir melden uns innerhalb 24h.">
+  <meta name="theme-color" content="#0A2540">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <style>
+    /* Contact Page Specific Styles */
+    .contact-hero {
+      background: var(--primary-navy);
+      color: var(--white);
+      padding: 140px 0 var(--space-xxl);
+      text-align: center;
+    }
+    
+    .contact-hero h1 {
+      color: var(--white);
+      margin-bottom: var(--space-md);
+    }
+    
+    .contact-hero p {
+      color: rgba(255, 255, 255, 0.8);
+      font-size: 1.25rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    
+    .contact-options {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-lg);
+      margin-top: var(--space-xl);
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .contact-option {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      transition: all var(--transition-normal);
+    }
+    
+    .contact-option:hover {
+      background: rgba(255, 255, 255, 0.15);
+      transform: translateY(-4px);
+    }
+    
+    .contact-option-icon {
+      width: 56px;
+      height: 56px;
+      background: var(--accent-aqua);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto var(--space-md);
+    }
+    
+    .contact-option-icon svg {
+      width: 28px;
+      height: 28px;
+      color: var(--white);
+    }
+    
+    .contact-option h3 {
+      color: var(--white);
+      font-size: 1.125rem;
+      margin-bottom: var(--space-xs);
+    }
+    
+    .contact-option a {
+      color: var(--accent-aqua);
+      font-size: 1.125rem;
+      font-weight: 600;
+    }
+    
+    .contact-option a:hover {
+      color: var(--white);
+    }
+    
+    .contact-option p {
+      color: rgba(255, 255, 255, 0.6);
+      font-size: 0.875rem;
+      margin: var(--space-xs) 0 0;
+    }
+    
+    @media (max-width: 768px) {
+      .contact-options {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Form Section */
+    .form-section {
+      padding: var(--space-xxl) 0;
+    }
+    
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--space-xxl);
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    
+    .form-info h2 {
+      margin-bottom: var(--space-md);
+    }
+    
+    .form-info p {
+      color: var(--medium-gray);
+      margin-bottom: var(--space-xl);
+    }
+    
+    .form-benefits {
+      list-style: none;
+    }
+    
+    .form-benefits li {
+      display: flex;
+      align-items: center;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-md);
+      color: var(--dark-gray);
+    }
+    
+    .form-benefits li svg {
+      width: 20px;
+      height: 20px;
+      color: var(--accent-aqua);
+    }
+    
+    /* Optimized Form */
+    .contact-form {
+      background: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      box-shadow: var(--shadow-medium);
+      border: 2px solid var(--light-border);
+    }
+    
+    .form-group {
+      margin-bottom: var(--space-lg);
+    }
+    
+    .form-label {
+      display: block;
+      margin-bottom: var(--space-xs);
+      font-weight: 600;
+      color: var(--primary-navy);
+      font-size: 0.9375rem;
+    }
+    
+    .form-input,
+    .form-select,
+    .form-textarea {
+      width: 100%;
+      padding: 0.875rem 1rem;
+      font-family: 'Inter', sans-serif;
+      font-size: 16px; /* Prevents zoom on iOS */
+      border: 2px solid var(--light-border);
+      border-radius: var(--radius-md);
+      background: var(--white);
+      color: var(--dark-gray);
+      transition: all var(--transition-normal);
+      -webkit-appearance: none;
+      appearance: none;
+    }
+    
+    .form-input:focus,
+    .form-select:focus,
+    .form-textarea:focus {
+      outline: none;
+      border-color: var(--secondary-blue);
+      box-shadow: 0 0 0 3px rgba(74, 159, 212, 0.2);
+    }
+    
+    .form-input::placeholder {
+      color: var(--medium-gray);
+    }
+    
+    /* Service Chips */
+    .service-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-sm);
+    }
+    
+    .service-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-xs);
+      padding: var(--space-sm) var(--space-md);
+      background: var(--light-gray);
+      border: 2px solid var(--light-border);
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      font-size: 0.9375rem;
+      transition: all var(--transition-normal);
+      -webkit-tap-highlight-color: transparent;
+    }
+    
+    .service-chip input {
+      display: none;
+    }
+    
+    .service-chip .check {
+      width: 18px;
+      height: 18px;
+      border: 2px solid var(--medium-gray);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-normal);
+    }
+    
+    .service-chip .check svg {
+      width: 12px;
+      height: 12px;
+      color: var(--white);
+      opacity: 0;
+    }
+    
+    .service-chip.selected {
+      background: var(--accent-aqua);
+      border-color: var(--accent-aqua);
+      color: var(--white);
+    }
+    
+    .service-chip.selected .check {
+      background: var(--white);
+      border-color: var(--white);
+    }
+    
+    .service-chip.selected .check svg {
+      opacity: 1;
+      color: var(--accent-aqua);
+    }
+    
+    .form-textarea {
+      min-height: 120px;
+      resize: vertical;
+    }
+    
+    .form-submit {
+      width: 100%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+    
+    .form-success {
+      display: none;
+      background: #c6f6d5;
+      color: #22543d;
+      padding: var(--space-md);
+      border-radius: var(--radius-md);
+      text-align: center;
+      margin-bottom: var(--space-md);
+    }
+    
+    .form-success.visible {
+      display: block;
+    }
+    
+    .checkbox-container {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--space-sm);
+      margin-bottom: var(--space-lg);
+    }
+    
+    .checkbox-container input {
+      width: 20px;
+      height: 20px;
+      margin-top: 2px;
+      accent-color: var(--accent-aqua);
+    }
+    
+    .checkbox-container label {
+      font-size: 0.875rem;
+      color: var(--medium-gray);
+      line-height: 1.5;
+    }
+    
+    .checkbox-container a {
+      color: var(--secondary-blue);
+      text-decoration: underline;
+    }
+    
+    @media (max-width: 768px) {
+      .form-grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-xl);
+      }
+      
+      .contact-form {
+        padding: var(--space-lg);
+      }
+      
+      .form-info {
+        text-align: center;
+      }
+      
+      .form-benefits {
+        text-align: left;
+        max-width: 300px;
+        margin: 0 auto;
+      }
+    }
+    
+    /* Map Section */
+    .map-section {
+      background: var(--light-gray);
+      padding: var(--space-xxl) 0;
+    }
+    
+    .map-container {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      height: 400px;
+      margin-top: var(--space-xl);
+      box-shadow: var(--shadow-medium);
+    }
+    
+    .map-container iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+    
+    @media (max-width: 768px) {
+      .map-container {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
+  <!-- Floating Action Button (Mobile) -->
+  <a href="tel:+302682012345" class="fab" aria-label="Jetzt anrufen" title="Jetzt anrufen">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+    </svg>
+  </a>
+
+  <!-- Header -->
+  <header class="header scrolled" id="header">
+    <div class="container">
+      <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+        <a href="index.html" class="logo" aria-label="Captain Jack Home">
+          <img src="https://i.ibb.co/kgP3Gxgz/image.png" alt="Captain Jack Logo" height="32">
+        </a>
+        
+        <button class="mobile-menu-btn" aria-label="Menü öffnen" aria-expanded="false" id="menuToggle">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <div class="nav-links" id="navLinks">
+          <a href="index.html#services">Leistungen</a>
+          <a href="index.html#keelcrab">Keelcrab</a>
+          <a href="index.html#faq">FAQ</a>
+          <a href="kontakt.html" class="btn btn-accent active">Anfrage senden</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Contact Hero -->
+  <section class="contact-hero" id="main-content">
+    <div class="container">
+      <h1>Lassen Sie uns sprechen</h1>
+      <p>Wir melden uns innerhalb von 24 Stunden. Versprochen.</p>
+      
+      <div class="contact-options">
+        <div class="contact-option">
+          <div class="contact-option-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+            </svg>
+          </div>
+          <h3>Anrufen</h3>
+          <a href="tel:+302682012345">+30 26820 12345</a>
+          <p>Mo–Sa: 8:00–18:00</p>
+        </div>
+        
+        <div class="contact-option">
+          <div class="contact-option-icon">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <h3>WhatsApp</h3>
+          <a href="https://wa.me/302682012345?text=Hallo%20Captain%20Jack" target="_blank" rel="noopener">Nachricht senden</a>
+          <p>Schnell & bequem</p>
+        </div>
+        
+        <div class="contact-option">
+          <div class="contact-option-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+          </div>
+          <h3>E-Mail</h3>
+          <a href="mailto:info@captainjack-boats.com">info@captainjack-boats.com</a>
+          <p>Immer erreichbar</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Section -->
+  <section class="form-section" id="contact-form">
+    <div class="container">
+      <div class="form-grid">
+        <div class="form-info">
+          <span class="section-label">Schnell & einfach</span>
+          <h2>Senden Sie uns eine Anfrage</h2>
+          
+          <p>Teilen Sie uns mit, was Sie brauchen. Wir erstellen Ihnen ein persönliches Angebot.</p>
+          
+          <ul class="form-benefits">
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Antwort innerhalb 24h
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Individuelles Angebot
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Keine versteckten Kosten
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
+              Direkte Beratung verfügbar
+            </li>
+          </ul>
+        </div>
+        
+        <form class="contact-form" id="contactForm" novalidate>
+          <div class="form-success" id="formSuccess">
+            <strong>Danke für Ihre Anfrage!</strong><br>
+            Wir melden uns innerhalb von 24 Stunden bei Ihnen.
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="name">Ihr Name *</label>
+            <input type="text" id="name" name="name" class="form-input" placeholder="Max Mustermann" required autocomplete="name">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="email">E-Mail-Adresse *</label>
+            <input type="email" id="email" name="email" class="form-input" placeholder="max@beispiel.de" required autocomplete="email">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="phone">Telefonnummer *</label>
+            <input type="tel" id="phone" name="phone" class="form-input" placeholder="+49 123 456789" required autocomplete="tel">
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label">Womit können wir helfen? *</label>
+            <div class="service-chips">
+              <label class="service-chip" onclick="toggleChip(this)">
+                <input type="checkbox" name="services" value="storage">
+                <span class="check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Bootslagerung</span>
+              </label>
+              
+              <label class="service-chip" onclick="toggleChip(this)">
+                <input type="checkbox" name="services" value="cleaning">
+                <span class="check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Keelcrab Reinigung</span>
+              </label>
+              
+              <label class="service-chip" onclick="toggleChip(this)">
+                <input type="checkbox" name="services" value="inspection">
+                <span class="check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Drohnen-Inspektion</span>
+              </label>
+              
+              <label class="service-chip" onclick="toggleChip(this)">
+                <input type="checkbox" name="services" value="camper">
+                <span class="check">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
+                    <polyline points="20 6 9 17 4 12"></polyline>
+                  </svg>
+                </span>
+                <span>Camper-Stellplatz</span>
+              </label>
+            </div>
+          </div>
+          
+          <div class="form-group">
+            <label class="form-label" for="message">Ihre Nachricht (optional)</label>
+            <textarea id="message" name="message" class="form-textarea" placeholder="Erzählen Sie uns mehr über Ihr Boot und Ihre Wünsche..."></textarea>
+          </div>
+          
+          <div class="checkbox-container">
+            <input type="checkbox" id="whatsapp" name="whatsapp" value="yes">
+            <label for="whatsapp">
+              Ich möchte Informationen auch per WhatsApp erhalten
+            </label>
+          </div>
+          
+          <div class="checkbox-container">
+            <input type="checkbox" id="privacy" name="privacy" required>
+            <label for="privacy">
+              Ich stimme der <a href="#" target="_blank">Datenschutzerklärung</a> zu *
+            </label>
+          </div>
+          
+          <button type="submit" class="btn btn-accent form-submit">
+            Anfrage senden
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="map-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-label">Wo Sie uns finden</span>
+        <h2>Unser Standort in Preveza</h2>
+        <p class="section-lead">Tor zum ionischen Meer – perfekt zwischen West- und Ostmediterran.</p>
+      </div>
+      
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3144.689003142748!2d20.7493!3d38.9581!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzjCsDU3JzI5LjIiTiAyMMKwNDQnNTcuNSJF!5e0!3m2!1sde!2sde!4v1609459200000!5m2!1sde!2sde"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Captain Jack Standort in Preveza"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-about">
+          <img src="https://i.ibb.co/kgP3Gxgz/image.png" alt="Captain Jack Logo" height="30" style="margin-bottom: var(--space-md); filter: brightness(0) invert(1);">
+          <p>Moderne Bootslagerung und smarte Service-Lösungen in Preveza.</p>
+        </div>
+        
+        <div>
+          <div class="footer-title">Navigation</div>
+          <ul class="footer-links">
+            <li><a href="index.html">Zurück zur Startseite</a></li>
+            <li><a href="index.html#services">Leistungen</a></li>
+            <li><a href="index.html#keelcrab">Keelcrab</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <div class="footer-title">Kontakt</div>
+          <div class="footer-contact-item">Preveza Marina</div>
+          <div class="footer-contact-item"><a href="tel:+302682012345">+30 26820 12345</a></div>
+          <div class="footer-contact-item"><a href="mailto:info@captainjack-boats.com">info@captainjack-boats.com</a></div>
+        </div>
+        
+        <div>
+          <div class="footer-title">Rechtliches</div>
+          <ul class="footer-links">
+            <li><a href="#">Impressum</a></li>
+            <li><a href="#">Datenschutz</a></li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2026 Captain Jack. Alle Rechte vorbehalten.</p>
+        <div class="footer-meta">
+          <a href="#">Impressum</a>
+          <a href="#">Datenschutz</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Footer (Mobile) -->
+  <div class="sticky-footer">
+    <div class="sticky-footer-content">
+      <a href="tel:+302682012345" class="btn btn-accent">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;">
+          <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"></path>
+        </svg>
+        Jetzt anrufen
+      </a>
+      <a href="https://wa.me/302682012345" class="btn btn-secondary" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+  <script>
+    // Service Chip Toggle
+    function toggleChip(chip) {
+      chip.classList.toggle('selected');
+      const checkbox = chip.querySelector('input');
+      checkbox.checked = !checkbox.checked;
+    }
+    
+    // Form Submission
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      
+      // Simple validation
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const phone = document.getElementById('phone').value.trim();
+      const privacy = document.getElementById('privacy').checked;
+      
+      if (!name || !email || !phone || !privacy) {
+        alert('Bitte füllen Sie alle Pflichtfelder aus.');
+        return;
+      }
+      
+      // Show success message
+      document.getElementById('formSuccess').classList.add('visible');
+      
+      // Reset form
+      this.reset();
+      document.querySelectorAll('.service-chip').forEach(chip => {
+        chip.classList.remove('selected');
+      });
+      
+      // Scroll to top of form
+      document.getElementById('contact-form').scrollIntoView({ behavior: 'smooth' });
+      
+      // Hide success after 5 seconds
+      setTimeout(() => {
+        document.getElementById('formSuccess').classList.remove('visible');
+      }, 5000);
+    });
+    
+    // Pre-select service from URL
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const type = urlParams.get('type');
+      
+      if (type) {
+        const serviceMap = {
+          'storage': 'storage',
+          'service': 'cleaning',
+          'keelcrab': 'cleaning',
+          'combo': 'storage'
+        };
+        
+        const checkboxId = serviceMap[type];
+        if (checkboxId) {
+          const checkbox = document.querySelector(`input[value="${checkboxId}"]`);
+          if (checkbox && !checkbox.checked) {
+            toggleChip(checkbox.closest('.service-chip'));
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
