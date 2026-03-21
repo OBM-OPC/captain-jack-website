@@ -329,28 +329,28 @@ p {
 
 /* Header Button - Gleichmäßiges Padding, Text-Font */
 .nav-links .btn {
-  padding: 0.625rem 1.25rem;
-  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
   font-weight: 500;
-  background: transparent;
+  background: var(--accent-aqua);
   color: var(--white);
-  border: 2px solid rgba(255, 255, 255, 0.5);
+  border: none;
 }
 
 .nav-links .btn:hover {
-  background: var(--white);
-  color: var(--primary-navy);
-  border-color: var(--white);
+  background: var(--secondary-blue);
+  color: var(--white);
 }
 
 .header.scrolled .nav-links .btn {
-  color: var(--primary-navy);
-  border-color: var(--primary-navy);
+  background: var(--accent-aqua);
+  color: var(--white);
+  border: none;
 }
 
 .header.scrolled .nav-links .btn:hover {
-  background: var(--primary-navy);
+  background: var(--secondary-blue);
   color: var(--white);
 }
 
