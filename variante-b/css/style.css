@@ -622,9 +622,19 @@ p {
 
 .star {
   color: #FFD700;
-  font-size: 1rem;
-  text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+  font-size: 1.75rem;
+  text-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
   animation: star-shine 2s ease-in-out infinite;
+}
+
+.google-stars-large {
+  display: flex;
+  gap: 4px;
+  margin-bottom: var(--space-xs);
+}
+
+.google-stars-large .star {
+  font-size: 2rem;
 }
 
 .star:nth-child(1) { animation-delay: 0s; }
