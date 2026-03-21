@@ -2122,7 +2122,14 @@ p {
   justify-content: center;
 }
 
-/* WhatsApp Button */
+.footer-logo-text {
+  font-family: 'Cinzel', serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--white);
+  display: inline-block;
+  margin-bottom: var(--space-md);
+}
 .whatsapp-btn {
   display: inline-flex;
   align-items: center;
