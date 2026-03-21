@@ -45,10 +45,9 @@
 }
 
 /* === Reset & Base === */
-*, *::before, *::after {
+html, body {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 html {
@@ -64,8 +63,8 @@ body {
   background: var(--white);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding-bottom: 80px; /* Space for sticky footer on mobile */
   overflow-x: hidden;
+  margin: 0;
 }
 
 img {
